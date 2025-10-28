@@ -2,16 +2,60 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="#" type="font/woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preload" type="font/woff2" href="./fonts/montserrat/MontserratBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="./fonts/montserrat/MontserratRegular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" type="font/woff2" href="./fonts/montserrat/MontserratSemiBold.woff2" as="font" crossorigin="anonymous">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="main-header">Шапка</header>
+    <nav class="navigation">
+      <div class="navigation__container">
+      <a class="navigation__logo">
+        <img class="navigation__logo-image">
+      </a>
+      <button class="navigation__toggle" type="button" aria-label="Личный кабинет"></button>
+      <button class="navigation__toggle" type="button" aria-label="Корзина"></button>
+      <button class="navigation__toggle" type="button" aria-label="Выпадающий список меню"></button>
+    </div>
+    <!-- <div class="navigation__wrapper">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+            <a class="navigation__link" href="#">Главная</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Каталог</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Доставка</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">О нас</a>
+          </li>
+      </ul>
+    </div> -->
+    </nav>
     <main>
-      <h1>Страница для старта</h1>
+      <section class="hero">
+      <picture>
+
+
+      </picture>
+      <button class="example__slider-buttonnext" type="button" aria-label="Кнопка слайдера следующий товар"></button>
+      <button class="example__slider-buttonprev" type="button" aria-label="Кнопка слайдера предыдущий товар"></button>
+      <p>Новинка!</p>
+      <h1>Декаф Флэт Уайт</h1>
+      <p class="hero__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+      <div class="hero__price price">
+        <p class="price__discount">295</p>
+        <p class="price__present">225</p>
+      </div>
+     <button class="other-products__button" type="button">Заказать</button>
+    </section>
     </main>
   </body>
 </html>
