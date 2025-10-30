@@ -1,1 +1,51 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $Montserrat;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+}
+
+.clearul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 40px;
+  }
+}
+
+.no-indent {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}

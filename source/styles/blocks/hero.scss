@@ -1,0 +1,252 @@
+.hero {
+  position: relative;
+  padding-top: 20px;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.hero picture {
+  display: flex;
+}
+.hero::after {
+  position: absolute;
+  content: "";
+  background-color: #F3EBE1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  width: 100vw;
+  height: 656px;
+  top: 1px;
+  left: calc(-50vw + 50%);
+  @media (min-width: $tablet-width) {
+    min-height: calc(100% - 188px);
+  }
+  @media (min-width: $desktop-width) {
+    min-height: 714px;
+  }
+}
+
+.hero__image {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+.hero__title {
+  order: 1;
+}
+
+.hero__description {
+  order: 2;
+}
+
+.hero__price {
+  order: 3;
+}
+
+.hero picture {
+  order: 4;
+}
+  }
+@media (min-width: $desktop-width) {
+  .hero__container {
+    order: 1;
+  }
+  .hero picture {
+    order: 0;
+    margin-top: 30px;
+    margin-bottom: 84px;
+  }
+}
+
+.hero__newest {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #7859CF;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 12px;
+   @media (min-width: $tablet-width) {
+    margin-top: 60px;
+   }
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-top: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+  }
+}
+
+.hero__description {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+   @media (min-width: $tablet-width) {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 32px;
+    width: 608px;
+   }
+   @media (min-width: $desktop-width) {
+    text-align: start;
+   }
+}
+
+.hero__price-discount {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #7859CF;
+  text-align: center;
+  text-decoration: line-through;
+}
+
+.hero__price-present {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #333333;
+  text-align: center;
+}
+
+.hero__slider-buttonnext {
+  z-index: 2;
+   @media (min-width: $tablet-width) {
+    border: none;
+   }
+}
+
+.hero__slider-buttonprev {
+  z-index: 2;
+   @media (min-width: $tablet-width) {
+    border: none;
+   }
+}
+
+.hero__slider-buttonnext::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../icons/stack.svg#sliderright");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  top: 47%;
+  right: 4px;
+  @media (min-width: $desktop-width) {
+    right: 35px;
+  }
+}
+
+.hero__slider-buttonprev::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../icons/stack.svg#sliderleft");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  top: 47%;
+  left: 4px;
+  @media (min-width: $desktop-width) {
+    left: 35px;
+  }
+}
+
+.hero__button {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #FFFFFF;
+  width: 113px;
+  height: 40px;
+  background-color: #7859CF;
+  border: none;
+  border-radius: 4px;
+}
+
+.hero__price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  width: 230px;
+  text-align: center;
+  margin: 20px auto 60px;
+   @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+   }
+   @media (min-width: $desktop-width) {
+    margin-top: 40px;
+    margin-left: 0;
+   }
+}
+
+.hero__price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95px;
+}
+
+.hero__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 625px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+.hero__slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.hero__slider-bar {
+  width: 40px;
+  height: 4px;
+  background-color: #bdbdbd;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  @media (min-width: $desktop-width) {
+    width: 60px;
+    height: 6px;
+  }
+}
+
+.hero__slider-bar--active {
+  background-color: #7859CF;
+}
+}
+
