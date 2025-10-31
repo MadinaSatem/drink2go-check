@@ -1,5 +1,6 @@
 .navigation {
   display: flex;
+
   @media (min-width: $desktop-width) {
     justify-content: space-between;
   }
@@ -10,22 +11,24 @@
   justify-content: space-between;
   width: 280px;
   height: 60px;
+
   @media (min-width: $tablet-width) {
     height: 80px;
     align-items: center;
   }
+
   @media (min-width: $desktop-width) {
     width: 310px;
-
-
   }
 }
 
 .navigation__container-buttons {
   display: flex;
+
   @media (min-width: $tablet-width) {
     order: 1;
   }
+
   @media (min-width: $desktop-width) {
     width: 250px;
     justify-content: space-between;
@@ -42,84 +45,162 @@
   height: 60px;
   background-color: #ffffff;
   border: none;
+
   @media (min-width: $desktop-width) {
     width: 112px;
   }
 }
 
-.navigation__toggle {
-width: 40px;
+.navigation__basket:hover svg {
+  fill: #7859cf;
 }
 
-.navigation__personal::after {
+.navigation__basket:focus svg {
+  fill: #7859cf;
+}
+
+.navigation__basket svg {
+  fill: #333333;
   content: "";
   position: absolute;
-  background-image: url("../../icons/stack.svg#personal");
-  background-repeat: no-repeat;
-  background-color: #ffffff;
-  width: 16px;
-  height: 16px;
   border: none;
   cursor: pointer;
-  top: center;
+  top: 20px;
   left: 23px;
+
   @media (min-width: $tablet-width) {
     top: 30px;
     left: 20px;
   }
+
   @media (min-width: $desktop-width) {
-    left: 10px;
+    left: 15px;
   }
 }
 
-.navigation__basket::after {
+.navigation__basket {
+  text-decoration: none;
+  outline: none;
+
+  &:hover {
+    color: #7859cf;
+  }
+
+  &:focus {
+    color: #7859cf;
+  }
+}
+
+.navigation__basket p {
+  color: #ffffff;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #333333;
+    height: 80px;
+    padding-left: 23px;
+
+    &:hover {
+      color: #7859cf;
+    }
+
+    &:focus {
+      color: #7859cf;
+      outline: none;
+    }
+
+    &:active {
+      background-color: #f0ebff;
+    }
+  }
+}
+
+
+.navigation__personal p {
+  color: #ffffff;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #333333;
+    height: 80px;
+    padding-left: 23px;
+
+    &:hover {
+      color: #7859cf;
+    }
+
+    &:focus {
+      color: #7859cf;
+      outline: none;
+    }
+
+    &:active {
+      background-color: #f0ebff;
+    }
+  }
+}
+
+.navigation__personal:hover svg {
+  fill: #7859cf;
+}
+
+.navigation__personal:focus svg {
+  fill: #7859cf;
+}
+
+.navigation__personal svg {
+  fill: #333333;
   content: "";
   position: absolute;
-  background-image: url("../../icons/stack.svg#basket");
-  background-repeat: no-repeat;
-  background-color: #ffffff;
-  width: 16px;
-  height: 16px;
   border: none;
   cursor: pointer;
-  top: center;
+  top: 20px;
   left: 23px;
-    @media (min-width: $tablet-width) {
+
+  @media (min-width: $tablet-width) {
     top: 30px;
     left: 20px;
   }
+
   @media (min-width: $desktop-width) {
-    left: 5px;
+    left: 15px;
   }
 }
 
 .navigation__personal {
-color: #ffffff;
-@media (min-width: $desktop-width) {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #333333;
-  height: 80px;
-}
-}
+  text-decoration: none;
+  outline: none;
 
-.navigation__basket {
-color: #ffffff;
-@media (min-width: $desktop-width) {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #333333;
-  height: 80px;
-}
+  &:hover {
+    color: #7859cf;
+  }
+
+  &:focus {
+    color: #7859cf;
+  }
 }
 
 .navigation__link {
   text-decoration: none;
   color: #333333;
+
+  @media (min-width: $tablet-width) {
+    color: inherit;
+  }
 }
 
 .navigation__item {
@@ -133,21 +214,39 @@ color: #ffffff;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-   @media (min-width: $tablet-width) {
-    width: 103px;
-   }
-}
+  border-top: 1px solid #f0ebff;
 
-.navigation__item {
-  border-top: 1px solid #F0EBFF;
+  &:active {
+    background-color: #f0ebff;
+  }
 
   @media (min-width: $tablet-width) {
+    width: 103px;
+    height: 80px;
     border-top: none;
+
+    &--current {
+      border-bottom: 2px solid #7859cf;
+      height: 100%;
+    }
+
+    &:hover {
+      color: #7859cf;
+    }
+
+    &:focus {
+      color: #7859cf;
+    }
+
+    &:active {
+      color: #7859cf;
+      background-color: #f0ebff;
+    }
   }
 }
 
 .navigation__item:last-child {
-  border-bottom: 1px solid #F0EBFF;
+  border-bottom: 1px solid #f0ebff;
 
   @media (min-width: $tablet-width) {
     border-bottom: none;
@@ -179,12 +278,15 @@ color: #ffffff;
     display: flex;
     margin-right: 60px;
   }
+
   @media (min-width: $desktop-width) {
     margin-right: 0;
   }
 }
 
 .navigation__toggle {
+  width: 40px;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
@@ -223,6 +325,7 @@ color: #ffffff;
     position: static;
     justify-content: flex-end;
     background-color: transparent;
+    height: 80px;
   }
 }
 
@@ -233,30 +336,16 @@ color: #ffffff;
     display: flex;
     align-items: center;
   }
+
   @media (min-width: $desktop-width) {
     justify-content: space-between;
     width: 480px;
   }
 }
 
-.navigation__item {
-  @media (min-width: $tablet-width) {
-    &--current {
-      border-bottom: 2px solid #7859CF;
-      height: 100%;
-    }
-  }
-}
-
-.navigation__link {
-  @media (min-width: $tablet-width) {
-    color: inherit;
-  }
-}
-
 .navigation__item--current .navigation__link {
   @media (min-width: $tablet-width) {
-    color: #7859CF;
+    color: #7859cf;
   }
 }
 
@@ -272,4 +361,11 @@ color: #ffffff;
     font-weight: 400;
     color: #333333;
   }
+}
+
+.navigation__basket:focus,
+.navigation__basket:focus p,
+.navigation__personal:focus,
+.navigation__personal:focus p {
+  color: #7859cf;
 }

@@ -1,0 +1,232 @@
+.features {
+  padding-bottom: 60px;
+}
+
+.features__features {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #7859cf;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 110px;
+}
+
+.features__title {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #333333;
+  text-align: center;
+  margin-top: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.features__list {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+  min-height: 664px;
+  row-gap: 30px;
+
+  @media (min-width: $tablet-width) {
+       counter-reset: advantages 1;
+        grid-template-columns: 339px 339px;
+        align-items: start;
+        gap: 50px 30px;
+        display: grid;
+        min-height: 238px;
+        justify-items: flex-end;
+        justify-content: flex-end;
+        margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 170px;
+    align-items: flex-end;
+  }
+}
+
+.features__item {
+  position: relative;
+  width: 280px;
+  height: 142px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @media (min-width: $tablet-width) {
+    width: 267px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 170px;
+    width: 318px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+.features__item:nth-child(1) {
+  min-height: 94px;
+}
+
+.features__item:nth-child(2) {
+  min-height: 94px;
+}
+
+.features__item:nth-child(3) {
+  min-height: 118px;
+}
+
+.features__item:nth-child(4) {
+  min-height: 118px;
+}
+}
+
+.features__item-title {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #333333;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
+
+.features__item-description {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
+
+.features__item:nth-child(1)::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../icons/stack.svg#clock");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 56px;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+
+   @media (min-width: $tablet-width) {
+    left: -70px;
+    top: 60px;
+    transform: none;
+   }
+
+   @media (min-width: $desktop-width) {
+    top: -20px;
+  right: 50%;
+  transform: translateX(50%);
+  left: 110px;
+   }
+}
+
+.features__item:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../icons/stack.svg#pocket");
+  background-repeat: no-repeat;
+  width: 52px;
+  height: 56px;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+
+  @media (min-width: $tablet-width) {
+    left: -70px;
+    top: 60px;
+    transform: none;
+   }
+
+   @media (min-width: $desktop-width) {
+    top: -20px;
+  right: 50%;
+  transform: translateX(50%);
+  left: 110px;
+   }
+}
+
+.features__item:nth-child(3)::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../icons/stack.svg#energy");
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 56px;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+
+  @media (min-width: $tablet-width) {
+    left: -70px;
+    top: 60px;
+    transform: none;
+   }
+
+   @media (min-width: $desktop-width) {
+    top: -20px;
+  right: 50%;
+  transform: translateX(50%);
+  left: 110px;
+   }
+}
+
+.features__item:nth-child(4)::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../icons/stack.svg#leaf");
+  background-repeat: no-repeat;
+  width: 46px;
+  height: 56px;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+
+  @media (min-width: $tablet-width) {
+    left: -70px;
+    top: 60px;
+    transform: none;
+   }
+
+   @media (min-width: $desktop-width) {
+    top: -20px;
+  right: 50%;
+  transform: translateX(50%);
+  left: 110px;
+   }
+}
